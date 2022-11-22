@@ -27,6 +27,10 @@ test('Teste se a aplicação é redirecionada para a página de About, na URL /a
   const { history } = renderWithRouter(<App />);
   const aboutLink = screen.getByRole('link', { name: 'About' });
   userEvent.click(aboutLink);
+  const tituloDoAbout = screen.getByText('About Pokédex');
+  const imageDoAbout = screen.getByRole('img');
+  expect(imageDoAbout).toHaveAttribute('src', 'https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png');
+  expect(tituloDoAbout).toBeInTheDocument();
   expect(history.location.pathname).toBe('/about');
 });
 
