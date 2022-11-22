@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+// asdadasd
 
 import { isPokemonFavoriteByIdType, pokemonType } from '../types';
 import {
