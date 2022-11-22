@@ -3,11 +3,6 @@ import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';
 import App from '../App';
 import renderWithRouter from '../renderWithRouter';
-// import { screen } from '@testing-library/react';
-
-const { render } = require('@testing-library/react');
-// const { Router } = require("react-router-dom");
-// const { App } = require('../App');
 
 test('Teste se o topo da aplicação contém um conjunto fixo de links de navegação', () => {
   renderWithRouter(<App />);
