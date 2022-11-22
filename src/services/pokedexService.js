@@ -6,7 +6,7 @@ const saveFavoritePokemon = (pokemonList) => (
   localStorage.setItem('favoritePokemonIds', JSON.stringify(pokemonList))
 );
 
-export const addPokemonToFavorites = (pokemonId) => {
+const addPokemonToFavorites = (pokemonId) => {
   const favoritePokemon = readFavoritePokemonIds();
   const newFavoritePokemon = [...favoritePokemon, pokemonId];
 
